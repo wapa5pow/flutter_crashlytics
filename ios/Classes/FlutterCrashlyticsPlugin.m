@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-#import "Fabric.h"
+#import <Fabric/Fabric.h>
 #import "Crashlytics.h"
 #import "FlutterCrashlyticsPlugin.h"
 
@@ -137,7 +137,7 @@
         [stack appendString: @"\n"];
     }
     CLSLog(@"%@", stack);
-    
+
     FlutterException *ex = [[FlutterException alloc] initWithName:cause reason:reason frameArray:frameArray];
 
     [ex raise];
